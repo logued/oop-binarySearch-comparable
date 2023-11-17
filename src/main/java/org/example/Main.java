@@ -30,7 +30,7 @@ public class Main {
         if(index < 0)
             System.out.println("Key value not found in array.");
         else
-            System.out.println("Found key " + key.getName() + " at index " + index);
+            System.out.println("Found key " + students[index].toString() + " at index " + index);
 
         // Note that if there are duplicates (e.g. two Zoes) then we will
         // find one of them, but we won't know which one (first, or second, or...)
@@ -51,7 +51,7 @@ public class Main {
             if (index < 0)
                 System.out.println("Key value not found in array.");
             else
-                System.out.println("Found key " + key.getName() + " age: "+ keyWithAge.getAge()+ " at index: " + index);
+                System.out.println("Found key " + students[index].toString()+ " at index: " + index);
         }
 
         // Note that we could have found student "Fred" as he is 21 also.
