@@ -1,4 +1,4 @@
-package org.example;
+package org.example;        // Sept 2024
 
 import java.util.Arrays;
 
@@ -13,7 +13,7 @@ public class Main {
         students[3] = new Student("Fred",21,1.74);
 
         // Case 1 - search based on Natural Ordering
-        // Elements must be sorted in ascending order based on Natural Ordering
+        // Elements MUST be sorted in ascending order based on Natural Ordering
         // - as defined by compareTo() - before binarySearch can be used.
         // In this example, the student name is used for the natural ordering.
         //
@@ -22,6 +22,8 @@ public class Main {
         // Initialise a key value to search for.  As the natural ordering
         // involves only the student name, that is the only field that we
         // need to set.  We are searching for a Student object with the name "Zoe".
+        // If there are multiple matches in the collection, binarySearch returns
+        // only the index of one of the matching values. (Not necessarily the first in the list)
         //
         Student key = new Student("Zoe",0,0.0);
 
@@ -55,7 +57,7 @@ public class Main {
         }
 
         // Note that we could have found student "Fred" as he is 21 also.
-        // Ase we said earlier, we don't know which one we will get back,
+        // As we said earlier, we don't know which one we will get back,
         // so don't assume that it will be the first one in the list.
 
 }
