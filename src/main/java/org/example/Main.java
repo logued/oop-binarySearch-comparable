@@ -60,4 +60,12 @@ public class Main {
         // As we said earlier, we don't know which one we will get back,
         // so don't assume that it will be the first one in the list.
 
+    //TODO
+    // Perform a binary search for a Student based on height (1.80)
+    // 1. Create a new comparator class to compare by height "StudentHeightComparator"
+    // 2. sort the array using your new comparator
+    // 3. Instantiate a new Student with the height set to 1.80
+    // 4. Call the binarySearch method and capture the return value
+    // 5. Print the Student found, or not found, as appropriate.
+
 }
