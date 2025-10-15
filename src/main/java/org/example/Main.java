@@ -1,6 +1,12 @@
-package org.example;        // Sept 2024
+package org.example;        // Oct 2025
 
 import java.util.Arrays;
+
+// Demonstrates use of Arrays.binarySearch() or Collections.binarySearch()
+// to search for an Object in a list of objects.
+// The matching of elements is done by either of the following:
+// 1. ensuring the list elements implement the Comparable interface or
+// 2. providing a Comparator to the binarySearch( ) method to determine order
 
 public class Main {
     public static void main(String[] args) {
@@ -43,12 +49,12 @@ public class Main {
         // If we fail to apply a consistent sort() followed by binarySearch(), then
         // we will get unreliable results.
 
-            Arrays.sort(students, new StudentAgeComparator());  // sort before binary search
+            Arrays.sort(students, new StudentAgeAscComparator());  // sort before binary search
 
-            // searching for a student's age this time
-            Student keyWithAge = new Student("", 21, 0.0);
+            // searching for a student object with a specific ag
+            Student keyStudent = new Student("", 21, 0.0);
 
-            index = Arrays.binarySearch(students, keyWithAge, new StudentAgeComparator());
+            index = Arrays.binarySearch(students, keyStudent, new StudentAgeAscComparator());
 
             if (index < 0)
                 System.out.println("Key value not found in array.");
@@ -59,6 +65,9 @@ public class Main {
         // Note that we could have found student "Fred" as he is 21 also.
         // As we said earlier, we don't know which one we will get back,
         // so don't assume that it will be the first one in the list.
+
+    // Similar logic applies to ArrayLists, but we use Collections.binarySearch()
+    // to perform a search.
 
     //TODO
     // Perform a binary search for a Student based on height (1.80)

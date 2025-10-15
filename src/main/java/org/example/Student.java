@@ -1,20 +1,10 @@
 package org.example;
 
-public class Student implements Comparable<Student>{
+public class Student {
+
     private String name;
     private int age;
     private double height;
-
-    @Override
-    public int compareTo(Student otherStudent) {
-        return this.name.compareTo(otherStudent.name);
-    }
-
-    public Student(String name, int age, double height) {
-        this.name = name;
-        this.age = age;
-        this.height = height;
-    }
 
     public String getName() {
         return name;
