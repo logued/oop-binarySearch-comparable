@@ -11,6 +11,12 @@ public class Student implements Comparable<Student>{
         return this.name.compareTo(other.name);
     }
 
+    public Student(String name, int age, double height) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+    }
+
     public String getName() {
         return name;
     }
@@ -31,6 +37,4 @@ public class Student implements Comparable<Student>{
                 ", height=" + height +
                 '}';
     }
-
-
 }

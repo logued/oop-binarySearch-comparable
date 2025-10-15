@@ -33,7 +33,7 @@ public class Main {
         //
         Student key = new Student("Zoe",0,0.0);
 
-        int index = Arrays.binarySearch( students, key );
+        int index = Arrays.binarySearch( students, key );  // will use Comparable implementation
 
         if(index < 0)
             System.out.println("Key value not found in array.");
@@ -71,10 +71,10 @@ public class Main {
 
     //TODO
     // Perform a binary search for a Student based on height (1.80)
-    // 1. Create a new comparator class to compare by height "StudentHeightComparator"
-    // 2. sort the array using your new comparator
-    // 3. Instantiate a new Student with the height set to 1.80
+    // 1. Create a new Comparator class to compare by height "StudentHeightComparator"
+    // 2. sort the array using your new Comparator
+    // 3. Instantiate a new Student to search for with the height set to 1.80
     // 4. Call the binarySearch method and capture the return value
-    // 5. Print the Student found, or not found, as appropriate.
+    // 5. Print details of the Student found, or message "not found", as appropriate.
 
 }
